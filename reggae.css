@@ -1,0 +1,115 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(reg01.jpg);
+    background-size: cover;
+}
+.viewport {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 0 30px;
+}
+.viewport .form-title {
+    text-align: center;
+    color: white;
+    padding-bottom: 6px;
+    border-bottom: 1px solid white;
+}
+.user-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+.input-box:nth-child(2n) {
+    justify-content: end;
+}
+.input-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+.input-box label {
+    width: 95%;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0px;
+}
+.input-box input {
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    padding: 0 10px;
+    border: 1px solid grey;
+}
+.gender-title {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    border-bottom: 1px solid white;
+}
+.gender-category {
+    margin: 15px 0px;
+    color: white;
+}
+.gender-category label {
+    padding: 0 20px 0 5px;
+}
+.gender-category label,
+.gender-category input,
+.submit-button input {
+    cursor: pointer;
+}
+.submit-button input {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background: rgba(63, 114, 76, 0.7)
+}
+.submit-button input:hover {
+    background: rgb(7, 104, 7);
+    color: white;
+}
+@media(max-width:600px) {
+    .viewport {
+        min-width: 280px;
+    }
+    .input-box {
+        margin-bottom: 12px;
+        width: 100%;
+    }
+    .input-box:nth-child(2n) {
+        justify-content: space-between;
+    }
+    .gender-category {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .user-box {
+        max-height: 350px;
+        overflow: auto;
+    }
+    .user-box::-webkit-scrollbar{
+        width: 0;
+    }
+}
